@@ -83,6 +83,13 @@ Add to your Cursor MCP config (global settings):
 
 Replace `/absolute/path/to/postgres-mcp-server` with your actual project path.
 
----
+## Example Outputs
+
+![List Tables](images/list_tables.png)
+
+![Get Schema](images/get_schema.png)
+
+![Execute SQL](images/execute_sql.png)
+
 
 *Future Proof Data Science - Teaching data scientists to optimize workflows with AI*
