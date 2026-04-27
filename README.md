@@ -64,7 +64,16 @@ Press `Ctrl+C` to stop. No errors = working correctly.
 
 ## Available Tools
 
-**`get_schema()`** - Get database schema
+- **`list_tables()`** - Returns the list of tables in the database  
+- **`get_schema(table)`** - Returns column names and data types for a given table  
+- **`execute_sql(sql)`** - Executes read-only SQL queries and returns results as structured dictionary output  
+
+## Safety Constraints
+
+- Only SELECT queries are allowed  
+- DDL/DML operations (INSERT, UPDATE, DELETE, DROP, ALTER, TRUNCATE, CREATE) are blocked  
+- Queries are expected to include a LIMIT clause (or will be automatically limited) to prevent large result sets  
+- Queries are validated against known tables using information_schema  
 
 ## Connect to Cursor
 
