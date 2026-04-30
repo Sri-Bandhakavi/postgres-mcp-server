@@ -51,7 +51,7 @@ npx @modelcontextprotocol/inspector poetry run python postgres-mcp-server/main.p
 
 This opens a web UI where you can:
 - View available tools under the **Tools** tab
-- Test `get_schema`
+- Test `list_tables`, `get_schema`, and `execute_sql`
 - See real-time results
 
 ### Quick Test
@@ -66,7 +66,8 @@ Press `Ctrl+C` to stop. No errors = working correctly.
 
 - **`list_tables()`** - Returns the list of tables in the database  
 - **`get_schema(table)`** - Returns column names and data types for a given table  
-- **`execute_sql(sql)`** - Executes read-only SQL queries and returns results as structured dictionary output  
+- **`execute_sql(sql)`** - Executes read-only SQL queries (generated from natural language by AI) and returns results as structured dictionary output  
+
 
 ## Safety Constraints
 
@@ -100,5 +101,3 @@ Replace `/absolute/path/to/postgres-mcp-server` with your actual project path.
 
 ![Execute SQL](images/execute_sql.png)
 
-
-*Future Proof Data Science - Teaching data scientists to optimize workflows with AI*
